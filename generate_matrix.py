@@ -3,7 +3,7 @@ import networkx as nx
 import numpy as np
 
 # Generate a random connected graph with weighted nodes
-n = 5 # number of nodes
+n = 6 # number of nodes
 p = 0.8 # probability of edge creation
 min_weight = 10
 max_weight = 50

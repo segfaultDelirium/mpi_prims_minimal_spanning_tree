@@ -4,6 +4,9 @@ pip install networkx
 to generate new matrix in Matrix.txt:
 python ./generate_matrix.py
 
+before you compile and run, you need to source this script which adds environment variables for MPI to work.
+source /opt/nfs/config/source_mpich401.sh
+
 then compile the prims.c:
 make
 

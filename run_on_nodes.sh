@@ -1,3 +1,3 @@
 #! /bin/bash
-mpiexec -f ./nodes -n 16 ./prims
+mpiexec -f ./nodes -n 8 ./prims
 
