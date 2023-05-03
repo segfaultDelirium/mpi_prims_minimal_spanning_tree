@@ -5,6 +5,9 @@ import numpy as np
 # Generate a random connected graph with weighted nodes
 n = 5 # number of nodes
 p = 0.8 # probability of edge creation
+min_weight = 10
+max_weight = 50
+
 while True:
     G = nx.fast_gnp_random_graph(n, p)
     if nx.is_connected(G):
@@ -13,7 +16,7 @@ while True:
 # Set the weights for the edges
 weights = {}
 for edge in G.edges():
-    weight = random.randint(10, 50)
+    weight = random.randint(min_weight, max_weight)
     weights[edge] = weight
 nx.set_edge_attributes(G, weights, "weight")
 
