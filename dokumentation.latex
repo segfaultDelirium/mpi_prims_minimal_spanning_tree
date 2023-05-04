@@ -54,6 +54,16 @@
 Program służy do znalezienia minimalnego drzewa rozpinające i wyliczania jego wagi z użyciem algorytmu Prima w sposób rozproszony dzięki bibliotece MPI.
 \end{abstract}
 
+\section{Schemat blokowy}
+Schemat blokowy został umieszczony na obrazku \ref{fig:schemat_blokowy}.
+\begin{figure}[H]
+\centering
+
+\includegraphics[scale=0.4]{MPI_diagram.png}\\
+\caption{Schemat blokowy programu, który znajduje minimalne drzewo rozpinające grafu.}
+\label{fig:schemat_blokowy}
+\end{figure}
+
 \section{Obsługa programu}
 
 Definiowanie wierzchołków odbywa się poprzez plik \verb|Matrix.txt|. Zapisana jest w nim macierz sąsiedztwa. Kolejne liczby to wagi połączeń między wierzchołkami. Przykładowo w komórce macierzy \verb|i,j| znajduje się waga połączenia pomiędzy węzłami \verb|i| oraz \verb|j|. W przypadku braku połączenia program oczekuje wartości -1. 
@@ -288,17 +298,16 @@ edge: 4  -  1 with weight: 15
 cumulative weight of the minimal spanning tree: 64
 \end{lstlisting}
 W celach weryfikacji można użyć strony \url{https://visualgo.net/en/mst}
+Gdy porównamy wynik (obrazek \ref{fig:mst_check}) otrzymany ze strony wyżej wymienionej, zauważymy że jest on identyczny z rozwiązaniem znalezionym przez nasz program. 
 
 \begin{figure}[h!]
 \centering
 
 \includegraphics[scale=0.6]{MST_check.png}\\
 \caption{Wynik otrzymany ze strony \url{https://visualgo.net/en/mst} zgadza się z wynikiem naszego programu.}
-\label{fig:HEWELD}
+\label{fig:mst_check}
 \end{figure}
 
 
-\bibliographystyle{alpha}
-\bibliography{sample}
 
 \end{document}
